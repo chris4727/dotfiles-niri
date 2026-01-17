@@ -165,10 +165,10 @@ binds {
 // ────────────── Startup Applications ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
-    spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
-    spawn-sh-at-startup "swww img $HOME/.config/wallpaper/wallpaper.jpg"
-    //spawn-sh-at-startup "waybar" // Launch waybar
     spawn-at-startup "qs" "-c" "noctalia-shell"
+    //spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
+    //spawn-sh-at-startup "swww img $HOME/.config/wallpaper/wallpaper.jpg"
+    //spawn-sh-at-startup "waybar" // Launch waybar
 
     prefer-no-csd // Disable program decorations
     screenshot-path null // Disable screenshot saving
