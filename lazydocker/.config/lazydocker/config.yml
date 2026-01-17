@@ -1,0 +1,24 @@
+# == LAZYDOCKER ==================================
+
+# --- THEME --------------------------------------
+# See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#color-attributes
+gui:
+  theme:
+    activeBorderColor:
+      - blue
+      - bold
+    inactiveBorderColor:
+      - '#6e6a86' # fg2
+    selectedLineBgColor:
+      - '#26233a' # bg2
+    optionsTextColor:
+      - blue
+stats:
+  graphs:
+    - caption: CPU (%)
+      statPath: DerivedStats.CPUPercentage
+      color: red
+    - caption: Memory (%)
+      statPath: DerivedStats.MemoryPercentage
+      color: magenta
+

@@ -1,0 +1,5 @@
+{
+  "template": "templates/daily-note-template",
+  "folder": "calendar/daily",
+  "autorun": false
+}

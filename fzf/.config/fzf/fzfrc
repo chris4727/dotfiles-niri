@@ -1,0 +1,17 @@
+export FZF_DEFAULT_OPTS='
+  --color=fg:#6e6a86,fg+:#e0def4,bg:#191724,bg+:#26233a
+  --color=hl:#ebbcba,hl+:#f6c177,info:#908caa,marker:#9ccfd8
+  --color=prompt:#c4a7e7,spinner:#ebbcba,pointer:#c4a7e7,header:#31748f
+  --color=gutter:#191724,border:#6e6a86,separator:#26233a,scrollbar:#c4a7e7
+  --color=preview-scrollbar:#c4a7e7,preview-label:#c4a7e7,label:#c4a7e7,query:#d9d9d9
+  --border="rounded" --border-label=" FZF " --border-label-pos="3" --preview-window="border-rounded"
+  --margin="1" --prompt=" -> " --marker="▶" --pointer="▷"
+  --separator="⎯" --scrollbar="▌" --info="right"
+  --ghost="find…"
+  --multi --tmux 50%
+  --bind=ctrl-p:toggle-preview
+  --preview="bat --color=always {}"
+  --preview-label=" PREVIEW "
+  --preview-label-pos="3"
+  --color=preview-border:#26233a
+  '

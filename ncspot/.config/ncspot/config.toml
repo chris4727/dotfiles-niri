@@ -1,0 +1,31 @@
+# == NCSPOT ======================================
+use_nerdfont = true
+hide_display_names = true
+notify = true
+library_tabs = [ "tracks", "albums", "artists", "playlists", "podcasts" ]
+
+[keybindings]
+"F1" = "noop"
+"g" = "focus queue"
+"F" = "focus search"
+"L" = "focus library"
+"Space" = "playpause"
+
+[theme]
+background = "#191724"
+primary = "#e0def4"
+secondary = "#1f1d2e"
+title = "magenta"
+playing = "yellow"
+playing_selected = "magenta"
+playing_bg = "#191724"
+highlight = "#191724"
+highlight_bg = "magenta"
+error = "#191724"
+error_bg = "red"
+statusbar = "#191724"
+statusbar_progress = "magenta"
+statusbar_bg = "magenta"
+cmdline = "yellow"
+cmdline_bg = "#191724"
+search_match = "magenta"

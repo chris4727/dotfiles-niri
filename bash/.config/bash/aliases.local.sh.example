@@ -1,0 +1,12 @@
+#== ALIASES.LOCAL ================================
+# This file is sourced by ~/.bashrc
+# Rename to "$XDG_CONFIG_HOME/bash/aliases.local"
+
+# ---  ENVIRONMENT VARIABLES  --------------------
+
+#export EXAMPLE="Hello world!"
+
+# ---  NAVIGATION  -------------------------------
+
+#alias example='echo $EXAMPLE'
+

@@ -1,0 +1,173 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$lua\
+$python\
+$rlang\
+$git_branch\
+$git_status\
+$line_break\
+$character
+"""
+
+continuation_prompt = '[∙∙∙](bl1)'
+
+#palette = 'gruvbox-dark'
+#palette = "rosepine-dawn"
+palette = "rosepine"
+#palette = "catppuccin-mocha"
+
+[palettes.gruvbox-dark]
+fg0 = '#fbf1c7'
+bg0 = '#282828'
+bg1 = '#3c3836'
+bg2 = '#665c54'
+bl1 = '#458588'
+cy1 = '#689d6a'
+gn1 = '#b8bb26'
+yl2 = '#d65d0e'
+pr1 = '#b16286'
+rd1 = '#cc241d'
+yl1 = '#d79921'
+
+[palettes.rosepine-dawn]
+fg0 = '#575279'
+bg0 = '#faf4ed'
+bg1 = '#f2e9e1'
+bg2 = '#9893a5'
+rd1 = '#b4637a'
+yl1 = '#ea9d34'
+cy1 = '#d7827e'
+bl1 = '#286983'
+gn1 = '#56949f'
+pr1 = '#907aa9'
+
+[palettes.rosepine]
+bg0 = '#191724'
+bg1 = '#1f1d2e'
+bg2 = '#26233a'
+fg0 = '#e0def4'
+fg1 = '#908caa'
+fg2 = '#6e6a86'
+rd1 = '#eb6f92'
+rd2 = '#eb6f92'
+gn1 = '#9ccfd8'
+gn2 = '#9ccfd8'
+yl1 = '#f6c177'
+yl2 = '#f6c177'
+bl1 = '#31748f'
+bl2 = '#31748f'
+pr1 = '#c4a7e7'
+pr2 = '#c4a7e7'
+cy1 = '#ebbcba'
+cy2 = '#ebbcba'
+
+[palettes.catppuccin-mocha]
+bg0 = '#1e1e2e'
+bg1 = '#181825'
+bg2 = '#11111b'
+fg0 = '#cdd6f4'
+fg1 = '#bac2de'
+fg2 = '#a6adc8'
+rd1 = '#f38ba8'
+rd2 = '#f38ba8'
+gn1 = '#a6e3a1'
+gn2 = '#a6e3a1'
+yl1 = '#f9e2af'
+yl2 = '#f9e2af'
+bl1 = '#89b4fa'
+bl2 = '#89b4fa'
+pr1 = '#cba6f7'
+pr2 = '#cba6f7'
+cy1 = '#89dceb'
+cy2 = '#89dceb'
+
+[os]
+disabled = false
+style = "bl1"
+#style = "bg:pr1 fg:bg0"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+Macos = "󰀵"
+Linux = "󰌽"
+Android = ""
+Arch = "󰣇"
+EndeavourOS = "󰣇"
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "pr1"
+style_root = "pr1"
+format = '[ $user]($style)'
+
+[hostname]
+ssh_only = false
+ssh_symbol = "@"
+format = '[@](gn1)[$hostname ](pr1)'
+trim_at = '.companyname.com'
+disabled = false
+
+[directory]
+style = "fg:cy1 bg:bg0"
+format = "[$path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "Documents"
+"Downloads" = "Downloads"
+"Music" = "Music"
+"Pictures" = "Pictures"
+".config" = ".config"
+
+[git_branch]
+symbol = "󰊢"
+style = "gn1"
+format = '[ $symbol $branch]($style)'
+
+[git_status]
+style = "rd1"
+format = '[$all_status$ahead_behind]($style)'
+
+[lua]
+symbol = "󰢱"
+style = "bl1"
+format = '[$symbol]($style) [$version](color_fg2)'
+
+[python]
+symbol = ""
+style = "bl1"
+format = '[$symbol]($style) [$version](color_fg2)'
+
+[rlang]
+symbol = ""
+style = "bl1"
+format = '[$symbol]($style) [$version](color_fg2)'
+
+[time]
+disabled = true
+time_format = "%R"
+style = "bg:bg1"
+format = '[[  $time ](fg:bg2 bg:bg1)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+# https://starship.rs/config/#character
+disabled = false
+success_symbol = '[->](bold fg:gn1)'
+error_symbol = '[->](bold fg:rd1)'
+vimcmd_symbol = '[<-](bold fg:gn1)' # Only available in ZSH & Fish
+vimcmd_replace_one_symbol = '[<-](bold fg:pr1)' # Only in Fish
+vimcmd_replace_symbol = '[<-](bold fg:pr1)' # Only in Fish
+vimcmd_visual_symbol = '[<-](bold fg:yl1)' # Only in Fish
