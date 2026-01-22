@@ -7,7 +7,7 @@
 input {
     keyboard {
         xkb {
-            layout "us" // Use the German keyboard layout
+            layout "us"
         }
         numlock // Enable numlock on startup
     }
@@ -173,7 +173,6 @@ binds {
     //spawn-sh-at-startup "waybar" // Launch waybar
 
     prefer-no-csd // Disable program decorations
-    //screenshot-path null // Disable screenshot saving
 
 // ────────────── Layout Settings ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
