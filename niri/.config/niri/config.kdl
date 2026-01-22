@@ -252,6 +252,11 @@ binds {
         clip-to-geometry true
     }
 
+    overview {
+      // Set overview background to Rosepine Base
+      backdrop-color "#191724"
+    }
+
 // ────────────── Environment Variables ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#environment
 
