@@ -35,15 +35,16 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
 
 binds {
+  // Niri Keybinds Docs: https://yalter.github.io/niri/Configuration%3A-Key-Bindings.html
     MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
+    MOD+SPACE                            hotkey-overlay-title="Application launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
 
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: kitty" { spawn-sh "kitty"; }
-    MOD+SPACE                           hotkey-overlay-title="Open App Launcher: Noctalia" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; } // https://docs.noctalia.dev/getting-started/keybinds/#_top
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
-    MOD+ALT+L                           hotkey-overlay-title="Lock Screen: Noctalia" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu lockAndSuspend"; }
-    MOD+M                               hotkey-overlay-title="File Manager: Dolphin" { spawn-sh "dolphin"; }
-    MOD+E                               hotkey-overlay-title="Emoji Picker" { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }
+    MOD+M                               hotkey-overlay-title="Messaging: Signal" { spawn-sh "signal-desktop"; }
+    MOD+E                               hotkey-overlay-title="File Manager: Dolphin" { spawn-sh "dolphin"; }
+    MOD+SHIFT+E                         hotkey-overlay-title="Emoji Picker" { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }
     MOD+C                               hotkey-overlay-title="Calendar" { spawn-sh "qs -c noctalia-shell ipc call calendar toggle"; }
     MOD+V                               hotkey-overlay-title="Clipboard History" { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
 
@@ -131,26 +132,27 @@ binds {
     MOD+SHIFT+8                         { move-column-to-workspace 8; }
     MOD+SHIFT+9                         { move-column-to-workspace 9; }
 
-    MOD+TAB                             { focus-workspace-previous; }
+    ALT+TAB                             hotkey-overlay-title="Previous workspace" { focus-workspace-previous; }
+    MOD+TAB                             hotkey-overlay-title="Overview" repeat=false { toggle-overview; }
 
     // ─── Layout Controls ───
     //MOD+C                               { center-column; }
-    MOD+CTRL+C                          { center-visible-columns; }
-    MOD+MINUS                           { set-column-width "-10%"; }
-    MOD+EQUAL                           { set-column-width "+10%"; }
+    MOD+CTRL+C                          hotkey-overlay-title="Center column" { center-visible-columns; }
+    MOD+MINUS                           hotkey-overlay-title="Shrink column" { set-column-width "-10%"; }
+    MOD+EQUAL                           hotkey-overlay-title="Expand column" { set-column-width "+10%"; }
     MOD+SHIFT+MINUS                     { set-window-height "-10%"; }
     MOD+SHIFT+EQUAL                     { set-window-height "+10%"; }
 
     // ─── Modes ───
-    MOD+T                               { toggle-window-floating; }
-    MOD+F                               { expand-column-to-available-width; }
-    MOD+SHIFT+F                         { fullscreen-window; }
-    MOD+W                               { toggle-column-tabbed-display; }
+    MOD+W                               hotkey-overlay-title="Toggle floating windows" { toggle-window-floating; }
+    MOD+F                               hotkey-overlay-title="Expand to full width" { expand-column-to-available-width; }
+    MOD+Z                               hotkey-overlay-title="Fullscreen window" { fullscreen-window; }
+    MOD+D                               hotkey-overlay-title="Toggle Dark Mode" { spawn-sh "qs -c noctalia-shell ipc call darkMode toggle"; }
 
     // ─── Screenshots ───
-    Mod+S                               { screenshot; }
-    Mod+SHIFT+S                         { screenshot-screen; }
-    Mod+CTRL+S                          { screenshot-window; }
+    PRINT                               hotkey-overlay-title="Screenshot selection"{ screenshot; }
+    SHIFT+PRINT                         hotkey-overlay-title="Screenshot window"{ screenshot-window; }
+    CTRL+SHIFT+PRINT                    hotkey-overlay-title="Screenshot screen"{ screenshot-screen; }
 
     // ─── Emergency Escape Key ───
     // Use this when a fullscreen app blocks your keybinds.
@@ -158,9 +160,8 @@ binds {
     MOD+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // ─── Exit / Power ───
-    CTRL+ALT+DELETE                     { quit; } // Also quits Niri
-    MOD+SHIFT+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
-    MOD+O                               repeat=false { toggle-overview; }
+    MOD+SHIFT+Q                          hotkey-overlay-title="Suspend" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    MOD+SHIFT+L                          hotkey-overlay-title="Lock Screen" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu lock"; }
 }
 
 // ────────────── Startup Applications ──────────────
