@@ -1,0 +1,49 @@
+{
+    "initial_working_directory": "~",
+    "pdf_previewer": "none",
+    "posix_terminal_shell": "bash",
+    "jobs_tab_visibility": "shown",
+    "editor_theme": "Rosé Pine",
+    "font_size_points": 11,
+    "default_project_location": "~/Repos",
+    "panes": {
+        "quadrants": [
+            "Source",
+            "TabSet1",
+            "Console",
+            "TabSet2",
+            "HiddenTabSet",
+            "Sidebar"
+        ],
+        "tabSet1": [
+            "Environment",
+            "History",
+            "Connections",
+            "Build",
+            "VCS",
+            "Tutorial",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "Viewer",
+            "Presentations"
+        ],
+        "hiddenTabSet": [],
+        "console_left_on_top": false,
+        "console_right_on_top": true,
+        "additional_source_columns": 0,
+        "sidebar": [
+            "Chat"
+        ],
+        "sidebar_visible": false,
+        "sidebar_location": "right"
+    },
+    "save_workspace": "never",
+    "load_workspace": false,
+    "insert_native_pipe_operator": true,
+    "editor_keybindings": "vim"
+}
