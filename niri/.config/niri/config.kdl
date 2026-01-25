@@ -36,7 +36,7 @@ input {
 
 binds {
   // Niri Keybinds Docs: https://yalter.github.io/niri/Configuration%3A-Key-Bindings.html
-    MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
+    MOD+F1                     { show-hotkey-overlay; }
     MOD+SPACE                            hotkey-overlay-title="Application launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
 
     // ─── Applications ───
@@ -63,7 +63,7 @@ binds {
     // ─── Window Movement and Focus ───
     MOD+Q                               { close-window; }
 
-    MOD+LEFT                            { focus-column-left; }
+    MOD+LEFT                            hotkey-overlay-title="Focus column left" { focus-column-left; }
     MOD+H                               { focus-column-left; }
     MOD+RIGHT                           { focus-column-right; }
     MOD+L                               { focus-column-right; }
@@ -72,11 +72,11 @@ binds {
     MOD+DOWN                            { focus-window-down; }
     MOD+J                               { focus-window-down; }
 
-    MOD+CTRL+LEFT                       { move-column-left; }
+    MOD+CTRL+LEFT                       hotkey-overlay-title="Move column left" { move-column-left; }
     MOD+CTRL+H                          { move-column-left; }
     MOD+CTRL+RIGHT                      { move-column-right; }
     MOD+CTRL+L                          { move-column-right; }
-    MOD+CTRL+UP                         { move-window-up; }
+    MOD+CTRL+UP                         hotkey-overlay-title="Move window up" { move-window-up; }
     MOD+CTRL+K                          { move-window-up; }
     MOD+CTRL+DOWN                       { move-window-down; }
     MOD+CTRL+J                          { move-window-down; }
@@ -86,12 +86,12 @@ binds {
     MOD+CTRL+HOME                       { move-column-to-first; }
     MOD+CTRL+END                        { move-column-to-last; }
 
-    MOD+SHIFT+LEFT                      { focus-monitor-left; }
+    MOD+SHIFT+LEFT                      hotkey-overlay-title="Focus monitor left" { focus-monitor-left; }
     MOD+SHIFT+RIGHT                     { focus-monitor-right; }
     MOD+SHIFT+UP                        { focus-monitor-up; }
     MOD+SHIFT+DOWN                      { focus-monitor-down; }
 
-    MOD+SHIFT+CTRL+LEFT                 { move-column-to-monitor-left; }
+    MOD+SHIFT+CTRL+LEFT                 hotkey-overlay-title="Move column to monitor left" { move-column-to-monitor-left; }
     MOD+SHIFT+CTRL+RIGHT                { move-column-to-monitor-right; }
     MOD+SHIFT+CTRL+UP                   { move-column-to-monitor-up; }
     MOD+SHIFT+CTRL+DOWN                 { move-column-to-monitor-down; }
@@ -112,7 +112,7 @@ binds {
     MOD+CTRL+SHIFT+WHEELSCROLLDOWN      { move-column-right; }
     MOD+CTRL+SHIFT+WHEELSCROLLUP        { move-column-left; }
 
-    MOD+1                               { focus-workspace 1; }
+    MOD+1                               hotkey-overlay-title="Focus workspace #" { focus-workspace 1; }
     MOD+2                               { focus-workspace 2; }
     MOD+3                               { focus-workspace 3; }
     MOD+4                               { focus-workspace 4; }
@@ -122,7 +122,7 @@ binds {
     MOD+8                               { focus-workspace 8; }
     MOD+9                               { focus-workspace 9; }
 
-    MOD+SHIFT+1                         { move-column-to-workspace 1; }
+    MOD+SHIFT+1                         hotkey-overlay-title="Move column to workspace #" { move-column-to-workspace 1; }
     MOD+SHIFT+2                         { move-column-to-workspace 2; }
     MOD+SHIFT+3                         { move-column-to-workspace 3; }
     MOD+SHIFT+4                         { move-column-to-workspace 4; }
@@ -137,7 +137,6 @@ binds {
 
     // ─── Layout Controls ───
     //MOD+C                               { center-column; }
-    MOD+CTRL+C                          hotkey-overlay-title="Center column" { center-visible-columns; }
     MOD+MINUS                           hotkey-overlay-title="Shrink column" { set-column-width "-10%"; }
     MOD+EQUAL                           hotkey-overlay-title="Expand column" { set-column-width "+10%"; }
     MOD+SHIFT+MINUS                     { set-window-height "-10%"; }
@@ -145,8 +144,8 @@ binds {
 
     // ─── Modes ───
     MOD+W                               hotkey-overlay-title="Toggle floating windows" { toggle-window-floating; }
-    MOD+F                               hotkey-overlay-title="Expand to full width" { expand-column-to-available-width; }
-    MOD+Z                               hotkey-overlay-title="Fullscreen window" { fullscreen-window; }
+    MOD+Z                               hotkey-overlay-title="Expand to full width" { expand-column-to-available-width; }
+    MOD+F                               hotkey-overlay-title="Fullscreen window" { fullscreen-window; }
     MOD+D                               hotkey-overlay-title="Toggle Dark Mode" { spawn-sh "qs -c noctalia-shell ipc call darkMode toggle"; }
 
     // ─── Screenshots ───
