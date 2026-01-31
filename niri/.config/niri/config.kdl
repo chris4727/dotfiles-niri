@@ -47,6 +47,7 @@ binds {
     MOD+SHIFT+E                         hotkey-overlay-title="Emoji Picker" { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }
     MOD+C                               hotkey-overlay-title="Calendar" { spawn-sh "qs -c noctalia-shell ipc call calendar toggle"; }
     MOD+V                               hotkey-overlay-title="Clipboard History" { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
+    MOD+SLASH                           hotkey-overlay-title="Open command panel" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
 
     // ─── Audio Controls ───
     // Example volume keys mappings for PipeWire & WirePlumber.
