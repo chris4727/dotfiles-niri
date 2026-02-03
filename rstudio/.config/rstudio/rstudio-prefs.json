@@ -44,6 +44,5 @@
     },
     "save_workspace": "never",
     "load_workspace": false,
-    "insert_native_pipe_operator": true,
     "editor_keybindings": "vim"
 }
