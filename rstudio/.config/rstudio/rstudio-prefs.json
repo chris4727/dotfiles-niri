@@ -44,5 +44,7 @@
     },
     "save_workspace": "never",
     "load_workspace": false,
-    "editor_keybindings": "vim"
+    "editor_keybindings": "vim",
+    "new_proj_git_init": true,
+    "insert_native_pipe_operator": true
 }
