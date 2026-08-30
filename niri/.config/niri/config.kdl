@@ -252,8 +252,8 @@ binds {
     }
 
     overview {
-      // Set overview background to Rosepine Base
-      backdrop-color "#191724"
+      // Set overview background to Catppuccin crust
+      backdrop-color "#11111b"
     }
 
 // ────────────── Environment Variables ──────────────
