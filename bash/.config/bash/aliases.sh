@@ -76,6 +76,7 @@ alias pacs='pacman -Ss'					# Search repositories for package
 alias paci='pacman -S'						# Install package
 #alias pacr='pacman -Rs'					# Remove package
 alias pacc='pacman -Qdtq | pacman -Rs'		# Cleanup packages
+alias mirror='cachyos-rate-mirrors'     # Update mirror list
 
 # ---  APPLICATION LAUNCHERS  -----------------------------------
 
