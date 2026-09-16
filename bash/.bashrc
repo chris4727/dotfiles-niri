@@ -9,7 +9,7 @@
 _source_if() { [[ -r "$1" ]] && source "$1"; }
 _have() { type "$1" &>/dev/null; }
 # Start SSH agent
-eval "$(ssh-agent -s)"
+eval "$(ssh-agent -s)" &>/dev/null
 
 # ---  ENVIRONMENT VARIABLES  --------------------
 
