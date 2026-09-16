@@ -125,7 +125,7 @@ alias dust='dust && df -h .'      # Run dust, and give a summary of disk space u
 
 # ---  FETCH  -----------------------------------
 
-alias fetch='clear && neofetch'
+alias fetch='clear && fastfetch'
 
 # ---  SHUTDOWN  -----------------------------------
 
