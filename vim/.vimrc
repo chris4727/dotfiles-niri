@@ -281,8 +281,8 @@ let g:disable_float_bg = 1
 set background=dark
 "let g:gruvbox_contrast_dark = 'medium'
 "colorscheme gruvbox
-"colorscheme rosepine
-colorscheme catppuccin_mocha
+colorscheme rosepine
+"colorscheme catppuccin_mocha
 
 " --- LIGHT MODE  --------------------------------
 
