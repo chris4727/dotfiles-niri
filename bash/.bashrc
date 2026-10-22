@@ -158,7 +158,7 @@ shopt -s extglob      # Allows all matching types in `pathname expansion`
 
 # ---  COMPLETION  -------------------------------
 
-_have pandoc && . <(pandoc --bash-completion)
+_have pandoc && . <(pandoc --completion=bash)
 
 # --- PERSONALIZED CONFIGURATIONS  ---------------
 
